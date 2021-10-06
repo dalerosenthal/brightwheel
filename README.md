@@ -1,6 +1,6 @@
 # brightwheel
 
-This is a short python script that downloads all your posted on Brightwheel. According to [brightwheel's help](https://help.mybrightwheel.com/en/articles/942382-download-photos-videos#bulk-save-workaround) (as of October 2021),
+This is a short python script that downloads all your posted on [Brightwheel](https://mybrightwheel.com/). According to [brightwheel's help](https://help.mybrightwheel.com/en/articles/942382-download-photos-videos#bulk-save-workaround) (as of October 2021),
 
 > At this time photos must be downloaded individually, not in batches.
 
@@ -16,7 +16,7 @@ STUDENT_ID='ZZZ'
 
 Now we need to fill in the values (but keep the single quote `'` marks).
 
-On brightwheel, navigate to your child's feed and look at the url, which has the `STUDENT_ID`:
+Login to brightwheel's web app, navigate to your child's feed, and look at the url, which has the `STUDENT_ID`:
 
 ```
 https://schools.mybrightwheel.com/students/[STUDENT_ID]/feed
