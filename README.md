@@ -1,6 +1,6 @@
-# Brightwheel Bulk Download Photos Script
+# Brightwheel Bulk Download Photos and Videos Script
 
-This is a short python script that downloads all your posted media on [Brightwheel](https://mybrightwheel.com/). According to [brightwheel's help](https://help.mybrightwheel.com/en/articles/942382-download-photos-videos#bulk-save-workaround) (as of October 2021),
+This is a short python script that downloads all your posted media on [Brightwheel](https://mybrightwheel.com/). According to [brightwheel's help](https://help.mybrightwheel.com/en/articles/942382-download-photos-videos#bulk-save-workaround) (as of October 2021 and October 2023),
 
 > At this time photos must be downloaded individually, not in batches.
 
@@ -35,7 +35,7 @@ Install poetry and then install the required dependencies for this project
 poetry install
 ```
 
-Downlaod the files to the `media/` folder (takes some time)
+Download the files to the `media/` folder (takes some time)
 
 ```bash
 poetry run python brightwheel.py
