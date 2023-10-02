@@ -9,23 +9,21 @@ This is a short python script that downloads all your posted media on [Brightwhe
 Create a `.env` file with this content:
 
 ```
-COOKIE='XXX'
+GUARDIAN_ID='ZZZ'
 X_CSRF_TOKEN='YYY'
-STUDENT_ID='ZZZ'
+COOKIE='XXX'
 ```
 
 Now we need to fill in the values (but keep the single quote `'` marks).
 
-Login to brightwheel's web app, navigate to your child's feed, and look at the url, which has the `STUDENT_ID`:
+Login to brightwheel's web app. On the first page, open up your [Chrome Network Panel](https://developer.chrome.com/docs/devtools/network/#open). Then, navigate to "My Children". You should see some entries populate the Network Panel table. In that able you will find some URLs that look like one of these (below) and which have your `GUARDIAN_ID`:
 
 ```
-https://schools.mybrightwheel.com/students/[STUDENT_ID]/feed
+https://schools.mybrightwheel.com/api/v1/guardians/[GUARDIAN_ID]
+https://schools.mybrightwheel.com/api/v1/guardians/[GUARDIAN_ID]/students?include[]=schools
 ```
 
-While on this page, open up your [Chrome Network Panel](https://developer.chrome.com/docs/devtools/network/#open) and click the "APPLY" button on the webpage:
-![Apply Button](apply.jpg)
-
-Now copy the `cookie` and `x-csrf-token` headers under **Request Headers** ([here's how to find your request headers](https://stackoverflow.com/questions/4423061/how-can-i-view-http-headers-in-google-chrome)).
+Next copy the `cookie` and `x-csrf-token` headers under **Request Headers** ([here's how to find your request headers](https://stackoverflow.com/questions/4423061/how-can-i-view-http-headers-in-google-chrome)).
 
 ## How to run it
 
@@ -35,7 +33,7 @@ Install poetry and then install the required dependencies for this project
 poetry install
 ```
 
-Download the files to the `media/` folder (takes some time)
+Download the files to the `media-[Student Name]/` folders (takes some time)
 
 ```bash
 poetry run python brightwheel.py
